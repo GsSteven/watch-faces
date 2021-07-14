@@ -40,6 +40,13 @@ nav {
         font-size: 20px;
         list-style: none;
         color: white;
+        li {
+            transition: .3s ease-in-out;
+            cursor: pointer;
+            &:hover {
+                color: v.$lightGrey;
+            }
+        }
     }
 }
 
@@ -62,23 +69,66 @@ nav {
             border: 2px solid;
             cursor: pointer;
             border-radius: 2px;
+            transition: .3s ease-in-out;
         }
         #getStarted {
             background-color: v.$yellow;
             border-color: v.$yellow;
+            &:hover {
+                background-color: transparent;
+                color: v.$yellow;
+                border-color: v.$blue;
+            }
         }
         #learnMore {
             background-color: transparent;
             border-color: v.$blue;
             color: v.$yellow;
+            &:hover {
+                background-color: v.$yellow;
+                color: black;
+                border-color: v.$yellow;
+            }
         }
     }
     h1 {
         color: white;
         font-family: v.$font1;
-        font-size: 60px;
+        font-size: 70px;
         font-weight: 400;
+        margin-bottom: 10px;
         text-align: center;
         text-shadow: 3px 4px 5px #000;
+    }
+}
+
+.watchFaceContainer {
+    width: 320px;
+    height: 345px;
+    background-color: v.$lightGrey;
+    text-align: center;
+    font-family: v.$font2;
+    img {
+        margin: 0 auto;
+        border-radius: 2px;
+        width: 100%;
+    }
+}
+
+#introFaces {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    border-radius: 2px;
+}
+
+@media screen and (max-width: 500px) {
+
+    #getStartedBox {
+        h1 {
+            font-size: 50px;
+        }
     }
 }
