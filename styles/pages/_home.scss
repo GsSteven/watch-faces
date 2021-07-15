@@ -1,8 +1,19 @@
 @use './../variables' as v;
+
+/* 
+Index
+1. Home
+2. About
+3. Explore
+
+*/
+
+//1. Home
 body {
     min-height: 100vh;
     width: 100%;
-    background-image: url("./../../images/so-white.png");
+    background-color: black;
+    //background-image: url("./../../images/so-white.png");
 }
 
 #landingPage {
@@ -16,6 +27,7 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 20px #000;
+    clip-path: ellipse(100% 55% at 48% 44%);
 }
 
 nav {
@@ -23,7 +35,7 @@ nav {
     position: absolute;
     top: 0;
     padding: 10px 0;
-    max-height: 40px;
+    max-height: 42.5px;
     .watchIcon {
         height: 30px;
         margin-left: 10px;
@@ -43,9 +55,21 @@ nav {
         li {
             transition: .3s ease-in-out;
             cursor: pointer;
-            &:hover {
-                color: v.$lightGrey;
+            a {
+                text-decoration: none;
+                color: white;
+                &:hover {
+                    color: v.$lightGrey;
+                }
             }
+        }
+    }
+    .selected {
+        color: v.$lightGrey;
+        &::after {
+            content: '';
+            border-bottom: 1px solid v.$blue;
+            display: block;
         }
     }
 }
@@ -91,24 +115,43 @@ nav {
             }
         }
     }
-    h1 {
-        color: white;
-        font-family: v.$font1;
-        font-size: 80px;
-        font-weight: 400;
-        margin-bottom: 10px;
-        text-align: center;
-        text-shadow: 3px 4px 5px #000;
-    }
+}
+
+h1 {
+    color: white;
+    font-family: v.$font1;
+    font-size: 80px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    text-align: center;
+    text-shadow: 3px 4px 3px #000;
+}
+
+h2 {
+    color: white;
+    font-family: v.$font1;
+    font-size: 70px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    text-align: center;
+    text-shadow: 3px 4px 3px #000;
 }
 
 .watchFaceContainer {
     width: 320px;
     height: 345px;
-    background-color: v.$lightGrey;
+    background-color: black;
     text-align: center;
     font-family: v.$font2;
+    font-weight: 300;
+    color: white;
     margin: 10px 20px;
+    border-radius: 2px;
+    transition: .3s ease-in-out;
+    &:hover {
+        background-color: v.$lightGrey;
+        color: black;
+    }
     img {
         margin: 0 auto;
         border-radius: 2px;
@@ -127,10 +170,49 @@ nav {
 }
 
 @media screen and (max-width: 550px) {
-
-    #getStartedBox {
-        h1 {
-            font-size: 50px;
-        }
+    h1 {
+        font-size: 50px;
     }
 }
+
+//2. About
+#aboutMe {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    p{
+        color: white;
+        font-family: v.$font2;
+        line-height: 1.5;
+        width: 600px;
+        margin: 30px auto;
+    }
+    a{ 
+        margin: 0 auto;
+    }
+}
+
+#mePortrait {
+    width: 250px;
+    position: relative;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.contactButton {
+    width: 80px;
+    height: 40px;
+    font-family: v.$font2;
+    font-weight: 800;
+    background-color: transparent;
+    border: 2px solid v.$yellow;
+    border-radius: 2px;
+    color: v.$yellow;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    &:hover {
+        background-color: v.$yellow;
+        color: black;
+    }
+}
+
