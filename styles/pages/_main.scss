@@ -31,6 +31,8 @@ nav {
         font-size: 20px;
         list-style: none;
         color: white;
+        z-index: 10;
+        transition: .5s ease-in-out;
         li {
             transition: .3s ease-in-out;
             cursor: pointer;
@@ -43,6 +45,27 @@ nav {
             }
         }
     }
+    .mobileNav {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        height: 26px;
+        width: 30px;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 15;
+        div {
+            width: 35px;
+            height: 6px;
+            border-radius: 2px;
+            background-color: black;
+            border: 1px solid white;
+            pointer-events: none;
+            transition: .3s ease-in-out;
+        }
+    }
     .selected {
         color: v.$lightGrey;
         &::after {
@@ -53,12 +76,33 @@ nav {
     }
 }
 
+@media screen and (max-width: 1000px) {
+    nav {
+        padding: 0;
+        .watchIcon {
+            margin-top: 10px;
+        }
+        ul {
+            width: 100%;
+            height: 50vh;
+            position: absolute;
+            top: -1200%;
+            flex-direction: column;
+            background-color: rgba(0, 0, 0, .8);
+            backdrop-filter: blur(2px);
+            font-size: 26px;
+        }
+        .mobileNav {
+            display: flex;
+        }
+    }
+}
+
 //2. Home
 body {
     min-height: 100vh;
     width: 100%;
     background-color: black;
-    //background-image: url("./../../images/so-white.png");
 }
 
 #landingPage {
@@ -68,18 +112,29 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
     box-shadow: 0 0 20px #000;
     clip-path: ellipse(100% 55% at 48% 44%);
 }
 
 #getStartedBox {
+    position: absolute;
+    top: 35%;
+    right: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    h1 {
+        position: relative;
+        span {
+            font-size: 15px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
     #getStartedButtons {
         display: flex;
         justify-content: space-around;
@@ -100,7 +155,7 @@ body {
             background-color: v.$yellow;
             border-color: v.$yellow;
             &:hover {
-                background-color: transparent;
+                background-color: rgba(0, 0, 0, .3);
                 color: v.$yellow;
                 border-color: v.$blue;
             }
@@ -109,10 +164,22 @@ body {
             background-color: transparent;
             border-color: v.$blue;
             color: v.$yellow;
+            background-color: rgba(0, 0, 0, .3);
             &:hover {
                 background-color: v.$yellow;
                 color: black;
                 border-color: v.$yellow;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #getStartedBox{
+        h1 {
+            font-size: 50px;
+            span {
+                font-size: 10px;
             }
         }
     }
@@ -146,7 +213,7 @@ h2 {
     font-family: v.$font2;
     font-weight: 300;
     color: white;
-    margin: 10px 40px;
+    margin: 30px 40px;
     border-radius: 2px;
     transition: .3s ease-in-out;
     overflow: hidden;
@@ -225,18 +292,4 @@ h2 {
     align-items: center;
     width: 80%;
     margin: 0 auto;
-}
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 550px) {
-    h1 {
-        font-size: 50px;
-    }
 }

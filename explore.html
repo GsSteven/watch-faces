@@ -13,11 +13,16 @@
 <body>
     <nav>
         <img class="watchIcon" src="./images/whiteWatchIcon.svg" alt=""/>
-        <ul>
+        <ul class="navContainer">
             <li><a href="./index.html">Home</a></li>
             <li><a href="./about.html">About</a></li>
             <li><a href="./explore.html" class="selected">Explore</a></li>
         </ul>
+        <div class="mobileNav">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
     </nav>
     <section id="explore">
     <h2 id="exploreHead">Explore</h2>
@@ -42,7 +47,12 @@
             <img width="320" height="320" src="./images/pokerSample.jpg" alt="Poker Face" />
             <h4>Poker Face</h4>
         </div>
+        <div class="watchFaceContainer">
+            <img width="320" height="320" src="./images/analogSpaceSample.jpg" alt="Analog Space" />
+            <h4>Analog Space</h4>
+        </div>
     </div>
 </section>
+<script src="./script.js"></script>
 </body>
 </html>
