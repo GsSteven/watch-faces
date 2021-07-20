@@ -8,12 +8,12 @@ mobileNav.onclick = () => {
     if (nav.style.top === "0px") {
         nav.style.top = "-1500%";
         bar1.style.transform = "rotate(0)";
-        bar1.style.backgroundColor = "black";
-        bar1.style.borderColor = "white";
+        bar1.style.backgroundColor = "white";
+        bar1.style.borderColor = "black";
         bar2.style.opacity = "1";
         bar3.style.transform = "rotate(0)";
-        bar3.style.backgroundColor = 'black';
-        bar3.style.borderColor = 'white';
+        bar3.style.backgroundColor = 'white';
+        bar3.style.borderColor = 'black';
     }
     //lower nav bar and change mobile nav
     else {
