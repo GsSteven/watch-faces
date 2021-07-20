@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway&display=swap" rel="stylesheet">
     <link rel='icon' type="image/png" sizes="64x64" href='/watchDesignsLogoIcon.png' >
     <link rel="apple-touch-icon" sizes="180x180" href="logoIcon180.png" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Watch Designs</title>
 </head>
 <body>
@@ -28,34 +29,83 @@
     </nav>
     <section id="explore">
     <h2 id="exploreHead">Explore</h2>
+    <div class="symbolsKey">
+        <div class="symbol">
+            <img src="./images/interactiveSymbol.png" alt="interactive" />
+            =
+            Interactive
+        </div>
+        <div class="symbol">
+            <img src="./images/animatedSymbol.png" alt="animated" />
+            =
+            Animated
+        </div>  
+    </div>
     <div class="watchesContainer">
-        <div class="watchFaceContainer">
+
+        <div class="watchFaceContainer" id="urbanNeon">
             <img width="320" height="320" src="./images/urbanNeonWatchDisplay.jpg" alt="Urban Neon" />
             <h4>Urban Neon</h4>
+            <img src="./images/interactiveSymbol.png" alt=""/>
+            <div class="expandedWatch" id="urbanNeonExpanded">
+                <button class="closeButton" >
+                    <div class="close1"></div>
+                    <div class="close2"></div>
+                </button>
+                <img class="multiWatch" src="./images/multiWatchUrbanNeonDesc.jpg" alt="multiWatch" />
+                <img class="singleWatch" src="./images/urbanNeonInstructions.jpg" alt="instructions" />
+            </div>
         </div>
+
         <div class="watchFaceContainer">
             <img width="320" height="320" src="./images/skyLineSample.jpg" alt="City SkyLine" />
             <h4>NYC Skyline</h4>
         </div>
+
         <div class="watchFaceContainer">
             <img width="320" height="320" src="./images/animatedNeon.jpg" alt="Infinite Cyber" />
             <h4>Animated Cyber</h4>
+            <img src="./images/animatedSymbol.png" alt=""/>
         </div>
+
         <div class="watchFaceContainer">
             <img width="320" height="320" src="./images/techSample.jpg" alt="Infinie Tech" />
             <h4>Animated Tech</h4>
+            <img src="./images/animatedSymbol.png" alt=""/>
         </div>
-        <div class="watchFaceContainer">
+
+        <div class="watchFaceContainer" id="pokerFace">
             <img width="320" height="320" src="./images/pokerSample.jpg" alt="Poker Face" />
             <h4>Poker Face</h4>
+            <img src="./images/interactiveSymbol.png" alt=""/>
+            <div class="expandedWatch" id="pokerFaceExpanded">
+                <button class="closeButton">
+                    <div class="close1"></div>
+                    <div class="close2"></div>
+                </button>
+                <img class="multiWatch" src="./images/multiPokerFace.jpg" alt="multiWatch" />
+                <img class="singleWatch" src="./images/pokerInstructions.jpg" alt="instructions" />
+            </div>
         </div>
-        <div class="watchFaceContainer">
+
+        <div class="watchFaceContainer" id="analogSpace">
             <img width="320" height="320" src="./images/analogSpaceSample.jpg" alt="Analog Space" />
             <h4>Analog Space</h4>
+            <img src="./images/interactiveSymbol.png" alt=""/>
+            <div class="expandedWatch" id="analogSpaceExpanded">
+                <button class="closeButton">
+                    <div class="close1"></div>
+                    <div class="close2"></div>
+                </button>
+                <img class="multiWatch" src="./images/analogSpaceMultiBlack.jpg" alt="multiWatch" />
+                <img class="singleWatch" src="./images/analogSpaceInstructions.jpg" alt="instructions" />
+            </div>
         </div>
+
         <div class="watchFaceContainer">
             <img width="320" height="320" src="./images/doughnutSample.jpg" alt="Doughnut" />
             <h4>Doughnut</h4>
+            <img src="./images/interactiveSymbol.png" alt=""/>
         </div>
     </div>
 </section>
