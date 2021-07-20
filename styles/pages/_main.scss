@@ -11,7 +11,7 @@ Index
 //1. Nav
 nav {
     width: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     padding: 10px 0;
     max-height: 42.5px;
@@ -46,7 +46,7 @@ nav {
         }
     }
     .mobileNav {
-        position: absolute;
+        position: fixed;
         top: 10px;
         right: 20px;
         height: 26px;
@@ -116,6 +116,9 @@ body {
     position: relative;
     box-shadow: 0 0 20px #000;
     clip-path: ellipse(100% 55% at 48% 44%);
+    nav {
+        position: absolute;
+    }
 }
 
 #getStartedBox {
@@ -206,29 +209,6 @@ h2 {
     text-shadow: 3px 4px 3px #000;
 }
 
-.watchFaceContainer {
-    width: 320px;
-    height: 400px;
-    background-color: black;
-    text-align: center;
-    font-family: v.$font2;
-    font-weight: 300;
-    color: white;
-    margin: 30px 40px;
-    border-radius: 2px;
-    transition: .3s ease-in-out;
-    overflow: hidden;
-    cursor: pointer;
-    &:hover {
-        color: v.$yellow;
-    }
-    img:first-child {
-        pointer-events: none;
-        border-radius: 2px;
-        width: 100%;
-    }
-}
-
 #introFaces {
     display: flex;
     flex-wrap: wrap;
@@ -254,13 +234,11 @@ h2 {
     a{ 
         margin: 0 auto;
     }
-}
-
-#mePortrait {
-    width: 250px;
-    position: relative;
-    margin: 0 auto;
-    border-radius: 2px;
+    #mePortrait {
+        width: 250px;
+        margin: 0 auto;
+        border-radius: 2px;
+    }
 }
 
 .contactButton {
@@ -312,6 +290,29 @@ h2 {
     margin: 0 auto;
 }
 
+.watchFaceContainer {
+    width: 320px;
+    height: 400px;
+    background-color: black;
+    text-align: center;
+    font-family: v.$font2;
+    font-weight: 300;
+    color: white;
+    margin: 30px 40px;
+    border-radius: 2px;
+    transition: .3s ease-in-out;
+    overflow: hidden;
+    cursor: pointer;
+    &:hover {
+        color: v.$yellow;
+    }
+    img:first-child {
+        pointer-events: none;
+        border-radius: 2px;
+        width: 100%;
+    }
+}
+
 .expandedWatch {
     width: 1200px;
     min-height: 500px;
@@ -358,5 +359,18 @@ h2 {
     }
     .singleWatch {
         width: 20%;
+        margin: 5px;
     }
 }
+
+@media screen and (max-width: 500px) {
+    .watchesContainer {
+        width: 100%;
+    }
+
+    .watchFaceContainer {
+        margin: 0 auto;
+    }
+}
+
+
