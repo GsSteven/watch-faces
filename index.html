@@ -43,17 +43,51 @@
         </div>
     </section>
     <div id="introFaces">
-        <div class="watchFaceContainer">
-            <img src="./images/urbanNeon/urbanNeonWatchDisplay.jpg" alt="Urban Neon" />
+        <div class="watchFaceContainer" id="urbanNeon">
+            <img width="320" height="320" src="./images/urbanNeon/urbanNeonWatchDisplay.jpg" alt="Urban Neon" />
             <h4>Urban Neon</h4>
+            <img src="./images/interactiveSymbol.png" alt=""/>
+            <div class="expandedWatch" id="urbanNeonExpanded">
+                <button class="closeButton" >
+                    <div class="close1"></div>
+                    <div class="close2"></div>
+                </button>
+                <img class="multiWatch" src="./images/urbanNeon/multiWatchUrbanNeonDesc.jpg" alt="multiWatch" />
+                <img class="singleWatch" src="./images/urbanNeon/urbanNeonInstructions.jpg" alt="instructions" />
+                <button class="contactButton"><a href="#" target="_blank">Visit Store</a></button>
+            </div>
         </div>
-        <div class="watchFaceContainer">
-            <img src="./images/nySkyline/skyLineSample.jpg" alt="City SkyLine" />
-            <h4>NYC Skyline</h4>
-        </div>
-        <div class="watchFaceContainer">
-            <img src="./images/animatedTech/techSample.jpg" alt="Infinie Tech" />
+
+        <div class="watchFaceContainer" id="animatedTech">
+            <div class="animatedContainer">
+                <img width="320" height="320" src="./images/animatedTech/techSample.jpg" alt="Infinie Tech" />
+                <video src="./images/animatedTech/animatedTech.mp4" alt="" autoplay loop></video>
+            </div>
             <h4>Animated Tech</h4>
+            <img src="./images/animatedSymbol.png" alt=""/>
+            <div class="expandedWatch" id="animatedTechExpanded">
+                <button class="closeButton">
+                    <div class="close1"></div>
+                    <div class="close2"></div>
+                </button>
+                <img class="multiWatch" src="./images/animatedTech/multiWatchAnimatedTech.jpg" alt="multiWatch" />
+                <button class="contactButton"><a href="#" target="_blank">Visit Store</a></button>
+            </div>
+        </div>
+
+        <div class="watchFaceContainer" id="doughnut">
+            <img width="320" height="320" src="./images/doughnut/doughnutSample.jpg" alt="Doughnut" loading="lazy"/>
+            <h4>Doughnut</h4>
+            <img loading="lazy" src="./images/interactiveSymbol.png" alt=""/>
+            <div class="expandedWatch" id="doughnutExpanded">
+                <button class="closeButton">
+                    <div class="close1"></div>
+                    <div class="close2"></div>
+                </button>
+                <img class="multiWatch" src="./images/doughnut/multiDoughnutSample.jpg" alt="multiWatch" />
+                <img class="singleWatch" src="./images/doughnut/pinkDoughnutInstructions.jpg" alt="instructions" />
+                <button class="contactButton"><a href="#" target="_blank">Visit Store</a></button>
+            </div>
         </div>
     </div>
     <script src="./script.js"></script>
