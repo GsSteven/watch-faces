@@ -22,10 +22,17 @@ $("document").ready(() => {
         const expandedContainerId = e.target.id + "Expanded";
         if (expandedContainerId) {
             $(`#${expandedContainerId}`).css("display", "flex");
+
+            if ($(".screenShade").css("opacity") !== "1") {
+                //backdrop shade on
+                $(".screenShade").css({ "opacity": "1", "pointerEvents": "auto" });
+            }
         }
     })
     //close expanded Watch Faces
     $(".closeButton").click(() => {
         $(".closeButton").parent().css("display", "none");
+        //backdrop shade off
+        $(".screenShade").css({ "opacity": "0", "pointerEvents": "none" });
     });
 });
