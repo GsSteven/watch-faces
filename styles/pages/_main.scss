@@ -221,15 +221,16 @@ h2 {
 
 //3. About
 #aboutMe {
-    padding-top: 100px;
+    padding: 100px 0 20px 0;
     display: flex;
     flex-direction: column;
     p{
         color: white;
         font-family: v.$font2;
         line-height: 1.5;
-        width: 600px;
+        max-width: 800px;
         margin: 30px auto;
+        padding: 0 15px;
     }
     a{ 
         margin: 0 auto;
