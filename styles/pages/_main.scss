@@ -269,7 +269,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     width: 300px;
-    margin: 0 auto;
+    margin: 0 auto 5px auto;
     .symbol {
         font-family: v.$font2;
         display: flex;
@@ -401,6 +401,17 @@ h2 {
     opacity: 0;
     pointer-events: none;
     transition: opacity .2s linear;
+}
+
+@media screen and (max-width: 1000px) {
+    .expandedWatch {
+        max-width: none;
+        width: 100%;
+        .closeButton {
+            top: 15px;
+            right: 20px;
+        }
+    }
 }
 
 @media screen and (max-width: 500px) {
