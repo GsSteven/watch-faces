@@ -26,6 +26,8 @@ $("document").ready(() => {
             if ($(".screenShade").css("opacity") !== "1") {
                 //backdrop shade on
                 $(".screenShade").css({ "opacity": "1", "pointerEvents": "auto" });
+                //disable scrolling
+                $("body").addClass('stopScrolling');
             }
         }
     })
@@ -34,5 +36,7 @@ $("document").ready(() => {
         $(".closeButton").parent().css("display", "none");
         //backdrop shade off
         $(".screenShade").css({ "opacity": "0", "pointerEvents": "none" });
+        //re-enable scrolling
+        $("body").removeClass('stopScrolling')
     });
 });
